@@ -8,7 +8,7 @@ Smart India Hackathon (SIH) Solution for Problem Statement PS8: Complaint & Help
 
 - **GitHub Repository:** https://github.com/Phantom6Paradise7/PS8-Helpdesk
 - **Frontend (Vercel):** https://vercel.com/mansabhatt62587-6900
-- **Backend (Render):** https://dashboard.render.com/
+- **Backend (Render):** https://ps8-helpdesk-omzk.onrender.com/
 
 ---
 

@@ -34,7 +34,11 @@ const LoginPage = ({ setUser }) => {
     setLoginError(null);
 
     try {
-      const response = await loginUser(loginData);
+      const payload = {
+        email: loginData.email.trim(),
+        password: loginData.password
+      };
+      const response = await loginUser(payload);
       if (response.token) {
         localStorage.setItem('token', response.token);
       }
@@ -56,8 +60,8 @@ const LoginPage = ({ setUser }) => {
 
   const handleRegisterSubmit = async (e) => {
     e.preventDefault();
-    if (registerData.password.length < 8) {
-      setRegisterError('Password must be at least 8 characters long.');
+    if (registerData.password.length < 6) {
+      setRegisterError('Password must be at least 6 characters long.');
       return;
     }
 
@@ -66,7 +70,13 @@ const LoginPage = ({ setUser }) => {
     setRegisterSuccess(null);
 
     try {
-      const response = await registerUser(registerData);
+      const payload = {
+        name: registerData.name.trim(),
+        email: registerData.email.trim(),
+        password: registerData.password,
+        role: registerData.role
+      };
+      const response = await registerUser(payload);
       if (response.token) {
         localStorage.setItem('token', response.token);
       }
@@ -173,7 +183,7 @@ const LoginPage = ({ setUser }) => {
                 onChange={handleRegisterChange}
                 placeholder="At least 8 characters"
                 required
-                minLength="8"
+                minLength="6"
               />
             </div>
 

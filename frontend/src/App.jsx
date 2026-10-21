@@ -14,7 +14,6 @@ import TicketDetailPage from './pages/TicketDetailPage';
 import AdminTicketsPage from './pages/AdminTicketsPage';
 import AdminDepartments from './pages/AdminDepartmentsPage';
 import AdminDashboard from './pages/AdminDashboardPage';
-import PresentationPage from './pages/PresentationPage';
 import NotFoundPage from './pages/NotFoundPage';
 
 import './styles/index.css';
@@ -46,8 +45,6 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<LoginPage setUser={setUser} />} />
           <Route path="/register" element={<RegisterPage setUser={setUser} />} />
-          <Route path="/presentation" element={<PresentationPage />} />
-          <Route path="/sih-ppt" element={<PresentationPage />} />
 
           <Route element={<ProtectedRoute user={user} allowedRoles={['customer', 'admin', 'support']} />}>
             <Route path="/tickets" element={<TicketsPage user={user} />} />

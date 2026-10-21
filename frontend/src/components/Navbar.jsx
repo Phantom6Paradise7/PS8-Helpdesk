@@ -39,7 +39,6 @@ const Navbar = ({ user, setUser }) => {
             <NavLink to="/" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>HOME</NavLink>
             <NavLink to="/login" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>LOGIN</NavLink>
             <NavLink to="/register" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>REGISTER</NavLink>
-            <NavLink to="/presentation" className={({ isActive }) => isActive ? 'nav-link active sih-link' : 'nav-link sih-link'}>SIH PPT</NavLink>
           </>
         )}
 
@@ -47,7 +46,6 @@ const Navbar = ({ user, setUser }) => {
           <>
             <NavLink to="/tickets" end className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>MY TICKETS</NavLink>
             <NavLink to="/tickets/new" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>NEW TICKET</NavLink>
-            <NavLink to="/presentation" className={({ isActive }) => isActive ? 'nav-link active sih-link' : 'nav-link sih-link'}>SIH PPT</NavLink>
           </>
         )}
 
@@ -56,7 +54,6 @@ const Navbar = ({ user, setUser }) => {
             <NavLink to="/admin/tickets" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>TICKETS</NavLink>
             <NavLink to="/admin/departments" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>DEPARTMENTS</NavLink>
             <NavLink to="/admin/dashboard" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>DASHBOARD</NavLink>
-            <NavLink to="/presentation" className={({ isActive }) => isActive ? 'nav-link active sih-link' : 'nav-link sih-link'}>SIH PPT</NavLink>
           </>
         )}
       </div>

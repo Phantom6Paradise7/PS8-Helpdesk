@@ -2,8 +2,6 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
-const passwordCriteriaRegax = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#^()_\-+={}[\]|:;"'<>,.~/`])[A-Za-z\d@$!%*?&#^()_\-+={}[\]|:;"'<>,.~/`]{8,}$/;
-
 const userSchema = new mongoose.Schema(
   {
     name: {
@@ -23,17 +21,8 @@ const userSchema = new mongoose.Schema(
     },
     password: {
       type: String, 
-      required: [true,'Password is required'],
-      minlength: [8, 'Password must be atleast 8 characters long'],
-      validate: {
-        validator: function (value) {
-          if (!this.isModified('password')) {
-            return true;
-          }
-          return passwordCriteriaRegax.test(value);
-        }, 
-        message: 'Password must be at least 8 characters long and include uppercase, lowercase, number, and special character'
-      }
+      required: [true, 'Password is required'],
+      minlength: [6, 'Password must be at least 6 characters long'],
     }, 
     role: {
       type: String, 
@@ -66,7 +55,7 @@ userSchema.methods.generateToken = function () {
     {
       id: this._id, role: this.role, email: this.email
     },
-    process.env.JWT_SECRET,
+    process.env.JWT_SECRET || '6519aa7bcfe36aa1b95b41fec8fa54aa33b94fa07bdbe94af87665bad45108f4',
     {
       expiresIn: process.env.JWT_EXPIRE || '7d'
     }

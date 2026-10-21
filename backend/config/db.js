@@ -1,17 +1,13 @@
 const mongoose = require('mongoose');
 
 const connectDB = async () => {
+  const uri = process.env.MONGO_URI || 'mongodb+srv://mansabhatt62587_db_user:48wNMlZjlNr26tYf@cluster7.klfzxyk.mongodb.net/helpdesk?retryWrites=true&w=majority';
   try {
-    if (!process.env.MONGO_URI) {
-      throw new Error('MONGO_URI is missing in environment variables');
-    }
-
-    const conn = await mongoose.connect(process.env.MONGO_URI);
-    console.log(`MongoDB Altas connected : ${conn.connection.host}`);
+    const conn = await mongoose.connect(uri);
+    console.log(`MongoDB connected: ${conn.connection.host}`);
   } catch (error) {
-    console.error(`Database Connection Error : ${error.message}`);
-    process.exit(1);
+    console.error(`Database Connection Error: ${error.message}`);
   }
 };
 
-module.exports = connectDB; 
+module.exports = connectDB;

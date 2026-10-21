@@ -3,7 +3,15 @@ const User = require('../models/User');
 const registerUser = async (req, res, next) => {
   try {
     const { name, email, password, role } = req.body;
-    const userExists = await User.findOne({ email });
+
+    if (!name || !email || !password) {
+      res.status(400);
+      throw new Error('Please provide name, email, and password');
+    }
+
+    const cleanEmail = email.toLowerCase().trim();
+
+    const userExists = await User.findOne({ email: cleanEmail });
     if (userExists) {
       res.status(409);
       throw new Error('User already exists with this email');
@@ -15,8 +23,8 @@ const registerUser = async (req, res, next) => {
     }
 
     const user = await User.create({ 
-      name, 
-      email, 
+      name: name.trim(), 
+      email: cleanEmail, 
       password, 
       role: userRole 
     });
@@ -33,7 +41,15 @@ const registerUser = async (req, res, next) => {
 const loginUser = async (req, res, next) => {
   try {
     const { email, password } = req.body;
-    const user = await User.findOne({ email });
+
+    if (!email || !password) {
+      res.status(400);
+      throw new Error('Please enter both email and password');
+    }
+
+    const cleanEmail = email.toLowerCase().trim();
+    const user = await User.findOne({ email: cleanEmail });
+
     if (user && (await user.matchPassword(password))) {
       res.json({
         token: user.generateToken(),

@@ -53,12 +53,6 @@
   color: var(--accent-primary);
 }
 
-.nav-link.sih-link {
-  color: var(--accent-primary);
-  border-bottom: 1.5px solid var(--accent-primary);
-  padding-bottom: 2px;
-}
-
 .nav-right {
   display: flex;
   align-items: center;

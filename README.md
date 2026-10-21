@@ -1,13 +1,13 @@
 # PS8: Helpdesk - Intelligent Complaint & Ticket Management System
 
-Smart India Hackathon (SIH) Solution for Problem Statement PS8: Complaint & Helpdesk Ticket System. Built with the MERN stack (MongoDB, Express, React 18, Node.js), featuring a retro-editorial dual-theme UI, automated SLA overdue tracking, role-based workflows, and an embedded SIH interactive pitch deck.
+Complaint & Helpdesk Ticket System (PS8). Built with the MERN stack (MongoDB, Express, React 18, Node.js), featuring a retro-editorial dual-theme UI, automated SLA overdue tracking, and role-based workflows.
 
 ---
 
 ## Live Deployments & Repository
 
 - **GitHub Repository:** https://github.com/Phantom6Paradise7/PS8-Helpdesk
-- **Frontend (Vercel):** https://vercel.com/mansabhatt62587-6900
+- **Frontend (Vercel):** https://ps-8-helpdesk.vercel.app/
 - **Backend (Render):** https://ps8-helpdesk-omzk.onrender.com/
 
 ---
@@ -46,8 +46,6 @@ Smart India Hackathon (SIH) Solution for Problem Statement PS8: Complaint & Help
    - Timestamped comment timeline between customers and support staff.
 6. **Executive Dashboard:**
    - Live metrics for open vs resolved tickets, average resolution hours, and category/priority breakdowns.
-7. **Embedded SIH Pitch Deck:**
-   - Full 9-slide Smart India Hackathon presentation viewer accessible via the navbar at `/presentation`.
 
 ---
 
@@ -85,12 +83,12 @@ npm run dev
    - `MONGO_URI`: `mongodb+srv://mansabhatt62587_db_user:48wNMlZjlNr26tYf@cluster7.klfzxyk.mongodb.net/`
    - `JWT_SECRET`: `6519aa7bcfe36aa1b95b41fec8fa54aa33b94fa07bdbe94af87665bad45108f4`
    - `CLIENT_URL`: `*`
-5. Click **Create Web Service**. Note the deployed Render URL (e.g., `https://ps8-helpdesk-backend.onrender.com`).
+5. Click **Create Web Service**.
 
 ### Frontend on Vercel
 1. Go to https://vercel.com/mansabhatt62587-6900 and click **Add New... > Project**.
 2. Import `https://github.com/Phantom6Paradise7/PS8-Helpdesk`.
 3. Set **Root Directory** to `frontend`.
 4. Add Environment Variable:
-   - `VITE_API_URL`: `<YOUR_RENDER_BACKEND_URL>/api` (e.g. `https://ps8-helpdesk-backend.onrender.com/api`)
+   - `VITE_API_URL`: `https://ps8-helpdesk-omzk.onrender.com/api`
 5. Click **Deploy**.

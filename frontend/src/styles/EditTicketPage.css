@@ -1,0 +1,10 @@
+.edit-status-badge-wrap {
+  margin-bottom: 1.25rem;
+}
+
+.loading-text {
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  padding: 3rem 0;
+}

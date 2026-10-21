@@ -1,0 +1,153 @@
+.dept-page-wrapper {
+  max-width: 1200px;
+  margin: 2.5rem auto 4rem auto;
+  padding: 0 2rem;
+}
+
+.dept-page-header {
+  margin-bottom: 2.5rem;
+}
+
+.dept-page-title {
+  font-family: var(--font-serif);
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.dept-two-col-grid {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.dept-form-box {
+  background-color: var(--bg-card);
+  border: 2px solid var(--border-card);
+  border-radius: var(--border-radius-card);
+  box-shadow: var(--card-shadow);
+  padding: 2.5rem 2.25rem;
+}
+
+.dept-list-box {
+  background-color: var(--bg-card);
+  border: 2px solid var(--border-card);
+  border-radius: var(--border-radius-card);
+  box-shadow: var(--card-shadow);
+  padding: 2.5rem 2.25rem;
+}
+
+.dept-card-heading {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  letter-spacing: -0.02em;
+}
+
+.dept-actual-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.dept-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.dept-input-label {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.dept-actions-row {
+  display: flex;
+  gap: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+.dept-submit-btn {
+  padding: 0.75rem 1.75rem;
+}
+
+.dept-edit-helper {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-top: 1rem;
+}
+
+.dept-items-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.dept-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border-color);
+  gap: 1.5rem;
+}
+
+.dept-row:first-child {
+  padding-top: 0;
+}
+
+.dept-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.dept-row-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.dept-name-heading {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--text-primary);
+}
+
+.dept-desc-text {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.dept-row-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-shrink: 0;
+}
+
+.dept-action-pill {
+  padding: 0.4rem 1.1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+.dept-loading {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+@media (max-width: 960px) {
+  .dept-two-col-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,165 @@
+.admin-tickets-wrapper {
+  max-width: 1200px;
+  margin: 2.5rem auto 4rem auto;
+  padding: 0 2rem;
+}
+
+.admin-tickets-header {
+  margin-bottom: 2.25rem;
+}
+
+.admin-page-title {
+  font-family: var(--font-serif);
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.5rem;
+}
+
+.admin-page-sub {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+}
+
+.admin-controls-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.admin-status-pills {
+  display: flex;
+  gap: 0.65rem;
+  align-items: center;
+}
+
+.admin-dropdown-filters {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.filter-select-pill {
+  width: auto;
+  padding: 0.45rem 1.1rem;
+  border-radius: var(--border-radius-pill);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background-color: transparent;
+  color: var(--text-primary);
+  border: 1.5px solid var(--border-color);
+  cursor: pointer;
+}
+
+.admin-table-card {
+  background-color: var(--bg-card);
+  border: 2px solid var(--border-card);
+  border-radius: var(--border-radius-card);
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+}
+
+.admin-datatable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.admin-datatable th {
+  padding: 1.25rem 1.75rem;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  border-bottom: 1.5px solid var(--border-color);
+}
+
+.admin-table-row {
+  border-bottom: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.admin-table-row:last-child {
+  border-bottom: none;
+}
+
+.admin-table-row:hover {
+  background-color: var(--bg-card-secondary);
+}
+
+.admin-datatable td {
+  padding: 1.35rem 1.75rem;
+  vertical-align: middle;
+}
+
+.admin-cell-id {
+  font-family: var(--font-sans);
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: var(--text-primary);
+}
+
+.admin-cell-subject {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.subject-line {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.subject-text {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--text-primary);
+}
+
+.subject-sub-cat {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.overdue-tag {
+  background-color: var(--status-overdue-bg);
+  color: var(--status-overdue-text);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--border-radius-pill);
+  text-transform: uppercase;
+}
+
+.admin-cell-dept {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.empty-table-cell {
+  text-align: center;
+  padding: 3.5rem 2rem;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+}
+
+.admin-loading-row {
+  height: 48px;
+  background-color: var(--bg-card-secondary);
+  margin: 1.25rem 2rem;
+  border-radius: 10px;
+  animation: pulse 1.5s infinite ease-in-out;
+}

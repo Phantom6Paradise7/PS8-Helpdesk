@@ -1,0 +1,84 @@
+.ticket-form-page-layout {
+  max-width: 1180px;
+  margin: 2.5rem auto 4rem auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 2.75rem;
+  align-items: start;
+}
+
+.ticket-form-main-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.ticket-page-header {
+  margin-bottom: 2rem;
+}
+
+.ticket-page-title {
+  font-family: var(--font-serif);
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.ticket-form-card {
+  background-color: var(--bg-card);
+  border: 2px solid var(--border-card);
+  border-radius: var(--border-radius-card);
+  box-shadow: var(--card-shadow);
+  padding: 2.5rem 2.25rem;
+}
+
+.ticket-side-info-card {
+  background-color: var(--bg-card);
+  border: 2px solid var(--border-card);
+  border-radius: var(--border-radius-card);
+  box-shadow: var(--card-shadow);
+  padding: 2.25rem;
+  margin-top: 5.5rem;
+}
+
+.side-card-label {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.side-card-tktid {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--accent-primary);
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+.side-card-description {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+@media (max-width: 860px) {
+  .ticket-form-page-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .ticket-side-info-card {
+    margin-top: 0;
+  }
+  .ticket-page-title {
+    font-size: 2.75rem;
+  }
+}

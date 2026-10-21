@@ -1,0 +1,111 @@
+.auth-page-wrapper {
+  max-width: 1120px;
+  margin: 2.5rem auto 4rem auto;
+  padding: 0 2rem;
+}
+
+.auth-header {
+  margin-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.auth-title {
+  font-family: var(--font-serif);
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.auth-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.auth-card {
+  background-color: var(--bg-card);
+  border: 2px solid var(--border-card);
+  border-radius: var(--border-radius-card);
+  box-shadow: var(--card-shadow);
+  padding: 2.5rem 2.25rem;
+  transition: transform 0.15s ease;
+}
+
+.auth-card-title {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 0.35rem;
+}
+
+.auth-card-subtitle {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+}
+
+.auth-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.auth-field-label {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+}
+
+.auth-submit-btn {
+  width: fit-content;
+  margin-top: 0.5rem;
+  padding: 0.75rem 2rem;
+  font-size: 0.85rem;
+}
+
+.auth-error {
+  background-color: rgba(217, 74, 56, 0.12);
+  color: var(--status-overdue-bg);
+  border: 1.5px solid var(--status-overdue-bg);
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+
+.auth-success {
+  background-color: rgba(82, 158, 100, 0.12);
+  color: var(--status-resolved-bg);
+  border: 1.5px solid var(--status-resolved-bg);
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+
+@media (max-width: 860px) {
+  .auth-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .auth-title {
+    font-size: 2.75rem;
+  }
+}

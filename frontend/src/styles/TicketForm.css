@@ -1,0 +1,56 @@
+.ticket-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.form-label-title {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.priority-pill-selector {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.priority-select-btn {
+  background-color: transparent;
+  border: 1.5px solid var(--border-color);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  padding: 0.45rem 1.35rem;
+  border-radius: var(--border-radius-pill);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.priority-select-btn:hover {
+  border-color: var(--accent-primary);
+}
+
+.priority-select-btn.selected {
+  background-color: var(--accent-primary);
+  border-color: var(--border-card);
+  color: var(--accent-text);
+  box-shadow: var(--button-shadow);
+}
+
+.form-actions-bar {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.75rem;
+}

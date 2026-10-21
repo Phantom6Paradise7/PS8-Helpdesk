@@ -1,0 +1,68 @@
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.3rem 0.85rem;
+  border-radius: var(--border-radius-pill);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.badge-open {
+  background-color: var(--status-open-bg);
+  color: var(--status-open-text);
+}
+
+.badge-in-progress {
+  background-color: var(--status-progress-bg);
+  color: var(--status-progress-text);
+}
+
+.badge-resolved {
+  background-color: var(--status-resolved-bg);
+  color: var(--status-resolved-text);
+}
+
+.badge-closed {
+  background-color: var(--status-closed-bg);
+  color: var(--status-closed-text);
+}
+
+.badge-overdue {
+  background-color: var(--status-overdue-bg);
+  color: var(--status-overdue-text);
+}
+
+.priority-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.priority-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.priority-high .priority-dot {
+  background-color: #d94a38;
+}
+
+.priority-medium .priority-dot {
+  background-color: #e5aa3f;
+}
+
+.priority-low .priority-dot {
+  background-color: #529e64;
+}

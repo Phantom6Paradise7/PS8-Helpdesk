@@ -1,0 +1,121 @@
+.conversation-card {
+  background-color: var(--bg-card);
+  border: 2px solid var(--border-card);
+  border-radius: var(--border-radius-card);
+  box-shadow: var(--card-shadow);
+  padding: 2.5rem 2.25rem;
+}
+
+.conversation-heading {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  letter-spacing: -0.02em;
+}
+
+.conversation-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  margin-bottom: 2.5rem;
+}
+
+.chat-message-item {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.chat-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--accent-primary);
+  color: var(--accent-text);
+  font-family: var(--font-sans);
+  font-weight: 800;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1.5px solid var(--border-card);
+  box-shadow: var(--button-shadow);
+}
+
+.chat-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 85%;
+}
+
+.chat-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+.chat-author-name {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.chat-dot {
+  opacity: 0.6;
+}
+
+.chat-bubble {
+  background-color: var(--bg-card-secondary);
+  border: 1px solid var(--border-color);
+  padding: 1rem 1.35rem;
+  border-radius: 14px;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+[data-theme="light"] .chat-bubble {
+  background-color: #f7f3ec;
+  border: 1.5px solid var(--border-card);
+}
+
+.reply-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.reply-label {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.reply-send-btn {
+  align-self: flex-start;
+  margin-top: 0.5rem;
+  padding: 0.75rem 2rem;
+  font-size: 0.82rem;
+}
+
+.closed-ticket-notice {
+  padding: 1rem 1.25rem;
+  background-color: var(--bg-card-secondary);
+  border-radius: 10px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.no-comments-hint {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}

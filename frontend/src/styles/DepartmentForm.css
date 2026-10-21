@@ -1,0 +1,41 @@
+.dept-form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.dept-form-title {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+.dept-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.dept-form-label {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+.dept-form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.dept-form-footer {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}

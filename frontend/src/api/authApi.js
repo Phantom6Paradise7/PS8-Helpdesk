@@ -1,9 +1,28 @@
 const rawUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 const API_URL = rawUrl.replace(/\/+$/, '');
 
+const fetchWithTimeout = async (url, options = {}, timeoutMs = 15000) => {
+  const controller = new AbortController();
+  const id = setTimeout(() => controller.abort(), timeoutMs);
+  try {
+    const response = await fetch(url, {
+      ...options,
+      signal: controller.signal
+    });
+    clearTimeout(id);
+    return response;
+  } catch (err) {
+    clearTimeout(id);
+    if (err.name === 'AbortError') {
+      throw new Error('Server request timed out after 15 seconds. Backend may be waking up on Render, please retry.');
+    }
+    throw err;
+  }
+};
+
 export const registerUser = async (userData) => {
   try {
-    const response = await fetch(`${API_URL}/auth/register`, {
+    const response = await fetchWithTimeout(`${API_URL}/auth/register`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -29,7 +48,7 @@ export const registerUser = async (userData) => {
     return data;
   } catch (err) {
     if (err.name === 'TypeError' && err.message.includes('Failed to fetch')) {
-      throw new Error('Unable to connect to backend server. Please check your network or wait for server startup.');
+      throw new Error('Unable to connect to backend server. Please verify Render backend is active and MongoDB Atlas IP is whitelisted (0.0.0.0/0).');
     }
     throw err;
   }
@@ -37,7 +56,7 @@ export const registerUser = async (userData) => {
 
 export const loginUser = async (credentials) => {
   try {
-    const response = await fetch(`${API_URL}/auth/login`, {
+    const response = await fetchWithTimeout(`${API_URL}/auth/login`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -63,7 +82,7 @@ export const loginUser = async (credentials) => {
     return data;
   } catch (err) {
     if (err.name === 'TypeError' && err.message.includes('Failed to fetch')) {
-      throw new Error('Unable to connect to backend server. Please check your network or wait for server startup.');
+      throw new Error('Unable to connect to backend server. Please verify Render backend is active and MongoDB Atlas IP is whitelisted (0.0.0.0/0).');
     }
     throw err;
   }
